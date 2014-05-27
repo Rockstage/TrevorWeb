@@ -1,0 +1,268 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	// font-family: helveticaneue;
+	text-align: center;
+	font-color: white;
+	font-family: 'Helvetica Neue';
+	font-weight: 200;
+}
+
+footer {
+	position: absolute;
+	width: 100%;
+	height: 30px;
+	left: 0;
+	bottom: 0;
+	z-index: 5;
+	p {
+		color: rgba(255,255,255,0.8);
+		font-size: 1vmax;
+	}
+}
+
+#home {
+	height: 100%;
+	width: 100%;
+	background-image: url('TrevorBG.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	.row {
+		position: absolute;
+		width: 100%;
+		height: 50%;
+		z-index: 2;
+
+		.col-sm-6 {
+			height: 100%;
+			a {
+				display: block;
+				margin-top: 35%; 
+				vertical-align: center;
+				&.bottom {
+					margin-top: 15%;
+				}
+				color: white;
+				font-size: 2vmax;
+				text-decoration: none;
+				&:hover {
+					color: orange;
+				}
+				transition-duration: 0.8s;
+				-webkit-transition-duration: 0.8s;
+				-moz-transition-duration: 0.8s;
+				-ms-transition-duration: 0.8s;
+			}
+		}
+	}
+
+	.menu-helpers {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-image: url('TrevorMenuHelpers.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+
+	.trevor-circle {
+		//position: absolute;
+		//height: 100%;
+		//width: 100%;
+		//z-index: 2;
+
+		.outer {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background-image: url('TrevorCircle42Outer.png');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			
+
+			-webkit-animation-name: spincc;
+		    -webkit-animation-duration: 40000ms;
+		    -webkit-animation-iteration-count: infinite;
+		    -webkit-animation-timing-function: linear;
+		    -moz-animation-name: spincc;
+		    -moz-animation-duration: 40000ms;
+		    -moz-animation-iteration-count: infinite;
+		    -moz-animation-timing-function: linear;
+		    -ms-animation-name: spincc;
+		    -ms-animation-duration: 40000ms;
+		    -ms-animation-iteration-count: infinite;
+		    -ms-animation-timing-function: linear;
+		    
+		    animation-name: spincc;
+		    animation-duration: 40000ms;
+		    animation-iteration-count: infinite;
+		    animation-timing-function: linear;
+		}
+
+		.mid {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background-image: url('TrevorCircle42Mid.png');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			
+
+			-webkit-animation-name: spin;
+		    -webkit-animation-duration: 15000ms;
+		    -webkit-animation-iteration-count: infinite;
+		    -webkit-animation-timing-function: linear;
+		    -moz-animation-name: spin;
+		    -moz-animation-duration: 15000ms;
+		    -moz-animation-iteration-count: infinite;
+		    -moz-animation-timing-function: linear;
+		    -ms-animation-name: spin;
+		    -ms-animation-duration: 15000ms;
+		    -ms-animation-iteration-count: infinite;
+		    -ms-animation-timing-function: linear;
+		    
+		    animation-name: spin;
+		    animation-duration: 15000ms;
+		    animation-iteration-count: infinite;
+		    animation-timing-function: linear;
+		}
+
+		.inner {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background-image: url('TrevorCircle42Inner.png');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			
+
+
+		}
+	}
+
+	.intro-heading {
+		position: absolute;
+		height: 90%;
+		width: 100%;
+		background-image: url('Hello.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		
+	}
+
+	.download-links {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-image: url('DownloadLinks.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		
+	}
+
+}
+
+
+// SPIN - ANIMATION PROPERTIES FOR BOTH DIRECTIONS SPIN and SPINCC
+
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+
+
+@-ms-keyframes spincc {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(-360deg); }
+}
+@-moz-keyframes spincc {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(-360deg); }
+}
+@-webkit-keyframes spincc {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(-360deg); }
+}
+@keyframes spincc {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(-360deg);
+    }
+}
+
+
+// BLINK - FADE IN AND OUT EFFECT .blink
+
+@-webkit-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0.5;
+    }
+    100% {
+        opacity:1;
+    }
+}
+@-moz-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0.5;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+.blink {
+	-webkit-transition: all 0s ease-in-out;
+    -moz-transition: all 0s ease-in-out;
+    -o-transition: all 0s ease-in-out;
+    -ms-transition: all 0s ease-in-out;
+    transition: all 0s ease-in-out;
+    
+    -webkit-animation-direction: normal;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: blink;
+    -webkit-animation-timing-function: ease-in-out;
+    
+	-moz-animation-direction: normal;
+    -moz-animation-duration: 5s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-name: blink;
+    -moz-animation-timing-function: ease-in-out;    
+}
+
