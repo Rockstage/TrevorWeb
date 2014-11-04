@@ -72,48 +72,52 @@ footer {
 
 
 	.trevor-circle {
-		//position: absolute;
-		//height: 100%;
-		//width: 100%;
-		//z-index: 2;
+
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		// z-index: 2;
+		overflow: hidden;
 
 		.outer {
 			position: absolute;
 			height: 100%;
 			width: 100%;
-			background-image: url('TrevorCircle42Outer.png');
+			// background-image: url('TrevorCircle42Outer.png');
+			background-image: url('TrevorMain.png');
 			background-repeat: no-repeat;
 			background-position: center;
-			background-size: cover;
+			// background-size: cover;
 			
 
-			-webkit-animation-name: spincc;
-		    -webkit-animation-duration: 40000ms;
-		    -webkit-animation-iteration-count: infinite;
-		    -webkit-animation-timing-function: linear;
-		    -moz-animation-name: spincc;
-		    -moz-animation-duration: 40000ms;
-		    -moz-animation-iteration-count: infinite;
-		    -moz-animation-timing-function: linear;
-		    -ms-animation-name: spincc;
-		    -ms-animation-duration: 40000ms;
-		    -ms-animation-iteration-count: infinite;
-		    -ms-animation-timing-function: linear;
+			// -webkit-animation-name: spincc;
+		 //    -webkit-animation-duration: 40000ms;
+		 //    -webkit-animation-iteration-count: infinite;
+		 //    -webkit-animation-timing-function: linear;
+		 //    -moz-animation-name: spincc;
+		 //    -moz-animation-duration: 40000ms;
+		 //    -moz-animation-iteration-count: infinite;
+		 //    -moz-animation-timing-function: linear;
+		 //    -ms-animation-name: spincc;
+		 //    -ms-animation-duration: 40000ms;
+		 //    -ms-animation-iteration-count: infinite;
+		 //    -ms-animation-timing-function: linear;
 		    
-		    animation-name: spincc;
-		    animation-duration: 40000ms;
-		    animation-iteration-count: infinite;
-		    animation-timing-function: linear;
+		 //    animation-name: spincc;
+		 //    animation-duration: 40000ms;
+		 //    animation-iteration-count: infinite;
+		 //    animation-timing-function: linear;
 		}
 
 		.mid {
 			position: absolute;
 			height: 100%;
 			width: 100%;
-			background-image: url('TrevorCircle42Mid.png');
+			background-image: url('TrevorTaralej.png');
 			background-repeat: no-repeat;
 			background-position: center;
-			background-size: cover;
+			overflow: hidden;
+			// background-size: cover;
 			
 
 			-webkit-animation-name: spin;
@@ -135,14 +139,51 @@ footer {
 		    animation-timing-function: linear;
 		}
 
+		// .mid {
+		// 	position: absolute;
+		// 	height: 100%;
+		// 	width: 100%;
+		// 	.taralej {
+		// 		display: block;
+		// 		margin: auto;
+		// 		vertical-align: middle;
+				
+		// 		// background-image: url('TrevorTaralej.png');
+		// 		// background-repeat: no-repeat;
+		// 		// background-position: center;
+				
+		// 		// background-size: cover;
+				
+
+		// 		-webkit-animation-name: spin;
+		// 	    -webkit-animation-duration: 15000ms;
+		// 	    -webkit-animation-iteration-count: infinite;
+		// 	    -webkit-animation-timing-function: linear;
+		// 	    -moz-animation-name: spin;
+		// 	    -moz-animation-duration: 15000ms;
+		// 	    -moz-animation-iteration-count: infinite;
+		// 	    -moz-animation-timing-function: linear;
+		// 	    -ms-animation-name: spin;
+		// 	    -ms-animation-duration: 15000ms;
+		// 	    -ms-animation-iteration-count: infinite;
+		// 	    -ms-animation-timing-function: linear;
+			    
+		// 	    animation-name: spin;
+		// 	    animation-duration: 15000ms;
+		// 	    animation-iteration-count: infinite;
+		// 	    animation-timing-function: linear;
+		// 	}
+		// }
+
 		.inner {
 			position: absolute;
 			height: 100%;
 			width: 100%;
-			background-image: url('TrevorCircle42Inner.png');
+			background-image: url('TrevorGlow.png');
 			background-repeat: no-repeat;
 			background-position: center;
-			background-size: cover;
+			// opacity: 0.5;
+			// background-size: cover;
 			
 
 
@@ -228,7 +269,7 @@ footer {
         opacity:1;
     }
     50% {
-        opacity:0.5;
+        opacity:0.3;
     }
     100% {
         opacity:1;
@@ -239,7 +280,7 @@ footer {
         opacity:1;
     }
     50% {
-        opacity:0.5;
+        opacity:0.3;
     }
     100% {
         opacity:1;
@@ -266,3 +307,47 @@ footer {
     -moz-animation-timing-function: ease-in-out;    
 }
 
+// USED FOR BLINKSLOW
+
+@-webkit-keyframes blinkSlow {
+    0% {
+        opacity:0.85;
+    }
+    50% {
+        opacity:1;
+    }
+    100% {
+        opacity:0.85;
+    }
+}
+@-moz-keyframes blinkSlow {
+    0% {
+        opacity:0.85;
+    }
+    50% {
+        opacity:1;
+    }
+    100% {
+        opacity:0.85;
+    }
+}
+
+.blinkSlow {
+	-webkit-transition: all 0s ease-in-out;
+    -moz-transition: all 0s ease-in-out;
+    -o-transition: all 0s ease-in-out;
+    -ms-transition: all 0s ease-in-out;
+    transition: all 0s ease-in-out;
+    
+    -webkit-animation-direction: normal;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: blinkSlow;
+    -webkit-animation-timing-function: ease-in-out;
+    
+	-moz-animation-direction: normal;
+    -moz-animation-duration: 3s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-name: blinkSlow;
+    -moz-animation-timing-function: ease-in-out;    
+}
